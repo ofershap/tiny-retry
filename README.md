@@ -1,7 +1,7 @@
 # tiny-retry
 
-[![npm version](https://img.shields.io/npm/v/tiny-retry.svg)](https://www.npmjs.com/package/tiny-retry)
-[![npm downloads](https://img.shields.io/npm/dm/tiny-retry.svg)](https://www.npmjs.com/package/tiny-retry)
+[![npm version](https://img.shields.io/npm/v/retry-tiny.svg)](https://www.npmjs.com/package/retry-tiny)
+[![npm downloads](https://img.shields.io/npm/dm/retry-tiny.svg)](https://www.npmjs.com/package/retry-tiny)
 [![CI](https://github.com/ofershap/tiny-retry/actions/workflows/ci.yml/badge.svg)](https://github.com/ofershap/tiny-retry/actions/workflows/ci.yml)
 [![TypeScript](https://img.shields.io/badge/TypeScript-strict-blue.svg)](https://www.typescriptlang.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -9,7 +9,7 @@
 Retry async functions with exponential backoff. Same API as [`p-retry`](https://github.com/sindresorhus/p-retry), but ships both ESM and CJS with zero dependencies.
 
 ```ts
-import { pRetry } from "tiny-retry";
+import { pRetry } from "retry-tiny";
 
 const data = await pRetry(
   () => fetch("https://api.example.com/data").then((r) => r.json()),
@@ -26,13 +26,13 @@ const data = await pRetry(
 ## Install
 
 ```bash
-npm install tiny-retry
+npm install retry-tiny
 ```
 
 ## Usage
 
 ```ts
-import { pRetry } from "tiny-retry";
+import { pRetry } from "retry-tiny";
 
 const result = await pRetry(
   async (attemptNumber) => {
@@ -48,7 +48,7 @@ const result = await pRetry(
 ### Stop retrying early
 
 ```ts
-import { pRetry, AbortError } from "tiny-retry";
+import { pRetry, AbortError } from "retry-tiny";
 
 await pRetry(
   async () => {
@@ -102,7 +102,7 @@ await pRetry(unreliableCall, {
 
 ```diff
 - import pRetry from "p-retry";
-+ import { pRetry } from "tiny-retry";
++ import { pRetry } from "retry-tiny";
 ```
 
 One line. Everything else stays the same.
@@ -146,7 +146,7 @@ Drop-in replacements for sindresorhus async utilities. All ship ESM + CJS with z
 | [tiny-ms](https://github.com/ofershap/tiny-ms)         | ms                   | Parse/format durations         |
 | [tiny-escape](https://github.com/ofershap/tiny-escape) | escape-string-regexp | Escape regex chars             |
 
-Want all async utilities in one import? Use [`tiny-async`](https://github.com/ofershap/tiny-async).
+Want all async utilities in one import? Use [`tiny-async-kit`](https://github.com/ofershap/tiny-async).
 
 ## Author
 

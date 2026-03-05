@@ -1,5 +1,5 @@
 {
-  "name": "tiny-retry",
+  "name": "retry-tiny",
   "version": "1.0.0",
   "description": "Retry async functions with exponential backoff. Same API as p-retry, ships ESM + CJS with zero dependencies.",
   "type": "module",
